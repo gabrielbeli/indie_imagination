@@ -61,3 +61,32 @@ body, html {
   transform: scale(1);
   opacity: 1;
 }
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  padding: 10px;
+  background: bisque;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0.5;
+
+  img {
+    width: 25px;
+  }
+
+  a {
+    color: #7d7987;
+    font-size: 14px;
+    line-height: 28px;
+
+    text-decoration: none;
+  }
+
+  .bi-instagram {
+    font-size: 20px;
+  }
+}
