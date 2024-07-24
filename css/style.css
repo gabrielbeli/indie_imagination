@@ -50,7 +50,7 @@ body, html {
   padding: .5rem 0;
   transform: scale(.95);
   opacity: .25;
-  transition: scale 550ms linear, opacity250ms linear;
+  transition: scale 550ms linear, opacity 250ms linear;
 }
 
 .menu a:first-of-type {
@@ -66,6 +66,12 @@ body, html {
 .menu a:hover {
   transform: scale(1);
   opacity: 1;
+}
+
+.menu a.active {
+  transform: scale(1);
+  opacity: 1;
+  font-weight: bold;
 }
 
 .carousel{
@@ -111,7 +117,7 @@ body, html {
 
 .arrows{
   display: flex;
-  gap: 10px;  
+  gap: 10px;
 }
 
 .arrows button{
@@ -125,9 +131,15 @@ body, html {
   font-weight: bold;
   transition: .5s;
 }
+
 .arrows button:hover{
   background-color: #fff;
   color: #000;
+}
+
+.menu .arrows #mute-toggle i {
+  font-size: 1.5rem;
+  opacity: 0.8;
 }
 
 .carousel .list .item:nth-child(1){
