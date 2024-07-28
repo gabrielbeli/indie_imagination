@@ -48,21 +48,6 @@ function showSlider(type){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const menuLinks = document.querySelectorAll('.menu a');
-    const currentPath = window.location.pathname;
-
-    menuLinks.forEach(link => {
-        const href = link.getAttribute('href');
-       
-        const normalizedHref = href.startsWith('/') ? href : `/${href}`;
-        if (normalizedHref === currentPath || 
-            (currentPath === '/' && normalizedHref === '/index.html')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active'); 
-        }
-    });
    
     let isMuted = true; 
     const muteButton = document.getElementById('mute-toggle');
