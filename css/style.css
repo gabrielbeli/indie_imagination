@@ -73,6 +73,17 @@ body, html {
   border-radius: 100px; 
 }
 
+.item-logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-logo img {
+  filter: invert(100%); 
+}
+
+
 .carousel{
   height: 100vh;
   margin-top: -67px;
@@ -81,6 +92,14 @@ body, html {
   position: relative;
   z-index: 0;
 }
+
+@media (max-width: 324px) {
+  .carousel {
+    margin-top: -124px;
+  }
+}
+
+
 .carousel .list .item{
   width: 100%;
   height: 100%;
@@ -270,5 +289,18 @@ footer a {
   font-size: 20px;
   line-height: 28px;
   text-decoration: none;
+}
+
+.container {
+  max-width: 400px;
+  color: white;
+  margin-right: 3%;
+
+  button {
+    background: white;
+    color: black;
+    border: none;
+    width: 100%;
+  }
 }
 
