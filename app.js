@@ -108,3 +108,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const gallery = document.querySelector('.gallery');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let scrollAmount = 0;
+
+    nextButton.addEventListener('click', () => {
+    gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' });
+    });
+
+    prevButton.addEventListener('click', () => {
+    gallery.scrollBy({ left: -gallery.clientWidth, behavior: 'smooth' });
+    });
+});
+
+
+

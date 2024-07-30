@@ -5,26 +5,30 @@ html {
   height: 100%;
 }
 
-/*body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;               
-}*/
+}
 
 .video-background {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 110%;
+  height: 120%;
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: -1;
 }
 
-@media (max-height: 668px) {
-  .video-background {
-    height: 150%;
-    top: 53%;
-  }
+.video-background-gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
 }
 
 .nameCompany {
@@ -191,7 +195,7 @@ html {
 
 @media (max-width: 480px) {
   .arrows {
-    top: 82%;
+    top: 80%;
     left: 10%;
   }
 
@@ -203,7 +207,7 @@ html {
 
 @media (min-width: 1440px) {
   .arrows {
-    top: 85%;
+    top: 82%;
     left: 10%;
   }
 }
@@ -369,7 +373,7 @@ footer a {
   padding: 20px;
   position: relative;
   z-index: 10;
-  max-width: 90%;
+  max-width: 70%;
   margin: auto;
   top: 10%;
 }
@@ -402,23 +406,38 @@ footer a {
   color: black;
 }
 
+@media (max-width: 1024px) {
+  .gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    max-width: 100%;
+    left: 5%;   
+  }
+
+  .card {
+    max-width: 100%; 
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    margin-right: 10px;
+  }
+}
+
+/*
 @media (max-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    top: 5%;
   }
 }
 
 @media (max-width: 480px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 320px) {
-  .gallery {
     grid-template-columns: 1fr;
   }
-}
+}*/
 
 @media (min-width: 1024px) {
   .gallery {
