@@ -51,7 +51,7 @@ html {
 
 @media (max-width: 768px) {
   .nameCompany {
-    top: 70%;
+    top: 72%;
     left: 11%;
   }
 }
@@ -196,7 +196,7 @@ html {
 
 @media (max-width: 480px) {
   .arrows {
-    top: 80%;
+    top: 79%;
     left: 10%;
   }
 
@@ -343,7 +343,7 @@ footer a {
 
 @media (min-width: 1441px) {
   .container {
-    margin-right: 4%;
+    margin-right: 5%;
     max-width: 500px;
     padding: 20px;
   }

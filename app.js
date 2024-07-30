@@ -124,7 +124,3 @@ document.addEventListener('DOMContentLoaded', () => {
     gallery.scrollBy({ left: -gallery.clientWidth, behavior: 'smooth' });
     });
 });
-
-
-
-
