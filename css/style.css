@@ -30,8 +30,8 @@ html {
 
 .nameCompany {
   position: absolute;
-  top: 67%;
-  left: 12%;
+  top: 73%;
+  left: 11.5%;
   transform: translateY(-50%);
   z-index: 10;
   display: flex;
@@ -45,24 +45,11 @@ html {
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .nameCompany {
-    top: 72%;
-    left: 11%;
-  }
-}
+@media (mi)
 
-@media (max-width: 320px) {
-  .nameCompany {
-    top: 75%;
-    left: 11%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .nameCompany {
-    top: 75%;
-    left: 11%;
+@media (max-height: 768px) and (min-height: 769px) {
+  .nameCompany {    
+    left:12%;
   }
 }
 
@@ -130,13 +117,20 @@ html {
 
 .thumbnail {
   position: absolute;
-  bottom: 240px;
+  bottom: 150px;
   left: 61%;
   width: max-content;
   z-index: 100;
   display: flex;
   gap: 20px;
 }
+
+@media (min-height: 769px) {
+  .thumbnail {
+    bottom: 240px;
+  }
+}
+
 .thumbnail .item {
   width: 150px;
   height: 220px;
@@ -152,7 +146,7 @@ html {
 
 .arrows {
   position: absolute;
-  top: 78%;
+  top: 81%;
   left: 10%;
   z-index: 20;
   display: flex;
@@ -180,8 +174,7 @@ html {
 
 @media (max-width: 768px) {
   .arrows {
-    top: 78%;
-    left: 10%;
+    left: 12%;
   }
 
   .arrows button {
@@ -191,11 +184,6 @@ html {
 }
 
 @media (max-width: 480px) {
-  .arrows {
-    top: 79%;
-    left: 10%;
-  }
-
   .arrows button {
     width: 25px;
     height: 25px;
@@ -204,8 +192,7 @@ html {
 
 @media (min-width: 1440px) {
   .arrows {
-    top: 82%;
-    left: 10%;
+    top: 81%;
   }
 }
 
@@ -337,7 +324,7 @@ footer a {
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1441px) and (min-height: 900px) {
   .container {
     margin-right: 5%;
     max-width: 500px;
@@ -423,10 +410,11 @@ footer a {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     top: 4%;
+    max-height: 100%;    
   }
 }
 
