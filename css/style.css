@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -12,11 +13,11 @@ body, html {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover; 
-  z-index: -1; 
+  object-fit: cover;
+  z-index: -1;
 }
 
-.nameCompany{
+.nameCompany {
   position: absolute;
   top: 67%;
   left: 12%;
@@ -29,21 +30,27 @@ body, html {
 
   color: white;
   font-size: 32px;
-  font-family: 'league gothic', sans-serif;
+  font-family: "league gothic", sans-serif;
   text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
   .nameCompany {
-    top: 73%; 
+    top: 73%;
     left: 11%;
   }
-
 }
 
 @media (max-width: 320px) {
   .nameCompany {
-    top: 75%; 
+    top: 75%;
+    left: 11%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nameCompany {
+    top: 75%;
     left: 11%;
   }
 }
@@ -56,21 +63,21 @@ body, html {
   a {
     color: white;
     font-size: 24px;
-    font-family: 'league gothic', sans-serif;
+    font-family: "league gothic", sans-serif;
     text-transform: uppercase;
     margin-top: 5px;
   }
 
-  a:hover{
+  a:hover {
     color: black;
   }
 }
 
 .nav .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.3); 
-  backdrop-filter: blur(10px); 
-  color: white; 
-  border-radius: 100px; 
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 100px;
 }
 
 .item-logo {
@@ -80,11 +87,10 @@ body, html {
 }
 
 .item-logo img {
-  filter: invert(100%); 
+  filter: invert(100%);
 }
 
-
-.carousel{
+.carousel {
   height: 100vh;
   margin-top: -67px;
   width: 100vw;
@@ -99,20 +105,19 @@ body, html {
   }
 }
 
-
-.carousel .list .item{
+.carousel .list .item {
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0 0 0 0;
 }
-.carousel .list .item video{
+.carousel .list .item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.thumbnail{
+.thumbnail {
   position: absolute;
   bottom: 100px;
   left: 61%;
@@ -121,13 +126,13 @@ body, html {
   display: flex;
   gap: 20px;
 }
-.thumbnail .item{
+.thumbnail .item {
   width: 150px;
   height: 220px;
   flex-shrink: 0;
   position: relative;
 }
-.thumbnail .item video{
+.thumbnail .item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -136,7 +141,7 @@ body, html {
 
 .arrows {
   position: absolute;
-  top: 78%; 
+  top: 78%;
   left: 10%;
   z-index: 20;
   display: flex;
@@ -145,15 +150,15 @@ body, html {
 }
 
 .arrows button {
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #eee4;
   border: none;
   color: #fff;
   font-family: monospace;
   font-weight: bold;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 20;
 }
 
@@ -164,103 +169,110 @@ body, html {
 
 @media (max-width: 768px) {
   .arrows {
-    top: 82%; 
+    top: 82%;
     left: 10%;
   }
 
   .arrows button {
-    width: 30px; 
+    width: 30px;
     height: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .arrows {
-    top: 82%; 
+    top: 82%;
     left: 10%;
   }
 
   .arrows button {
-    width: 25px; 
+    width: 25px;
     height: 25px;
   }
 }
 
-.carousel .list .item:nth-child(1){
+@media (min-width: 1440px) {
+  .arrows {
+    top: 85%;
+    left: 10%;
+  }
+}
+
+.carousel .list .item:nth-child(1) {
   z-index: 1;
 }
 
-.carousel.next .list .item:nth-child(1) video{
+.carousel.next .list .item:nth-child(1) video {
   width: 150px;
   height: 220px;
   position: absolute;
   bottom: 100px;
   left: 61%;
   border-radius: 30px;
-  animation: showVideo .5s linear 1 forwards;
+  animation: showVideo 0.5s linear 1 forwards;
 }
 
-@keyframes showVideo{
-  to{
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 0;
+@keyframes showVideo {
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 }
 
-.carousel.next .thumbnail .item:nth-last-child(1){
+.carousel.next .thumbnail .item:nth-last-child(1) {
   overflow: hidden;
-  animation: showThumbnail .5s linear 1 forwards;
+  animation: showThumbnail 0.5s linear 1 forwards;
 }
-.carousel.prev .list .item video{
+.carousel.prev .list .item video {
   z-index: 100;
 }
-@keyframes showThumbnail{
-  from{
-      width: 0;
-      opacity: 0;
+@keyframes showThumbnail {
+  from {
+    width: 0;
+    opacity: 0;
   }
 }
-.carousel.next .thumbnail{
-  animation: effectNext .5s linear 1 forwards;
+.carousel.next .thumbnail {
+  animation: effectNext 0.5s linear 1 forwards;
 }
 
-@keyframes effectNext{
-  from{
-      transform: translateX(150px);
+@keyframes effectNext {
+  from {
+    transform: translateX(150px);
   }
 }
 
-.carousel.prev .list .item:nth-child(2){
+.carousel.prev .list .item:nth-child(2) {
   z-index: 2;
 }
 
-.carousel.prev .list .item:nth-child(2) video{
+.carousel.prev .list .item:nth-child(2) video {
   animation: outFrame 0.5s linear 1 forwards;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-@keyframes outFrame{
-  to{
-      width: 150px;
-      height: 220px;
-      bottom: 100px;
-      left: 61%;
-      border-radius: 20px;
+@keyframes outFrame {
+  to {
+    width: 150px;
+    height: 220px;
+    bottom: 100px;
+    left: 61%;
+    border-radius: 20px;
   }
 }
 
-.carousel.prev .thumbnail .item:nth-child(1){
+.carousel.prev .thumbnail .item:nth-child(1) {
   overflow: hidden;
   opacity: 0;
-  animation: showThumbnail .5s linear 1 forwards;
+  animation: showThumbnail 0.5s linear 1 forwards;
 }
 
 .carousel.next .arrows button,
-.carousel.prev .arrows button{
+.carousel.prev .arrows button {
   pointer-events: none;
 }
 
@@ -275,9 +287,8 @@ footer {
   opacity: 0.5;
   z-index: 10;
 
-  background-color: rgba(255, 255, 255, 0.3); 
-  backdrop-filter: blur(10px); 
- 
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 footer img {
@@ -285,7 +296,7 @@ footer img {
 }
 
 footer a {
-  color: black; 
+  color: black;
   font-size: 20px;
   line-height: 28px;
   text-decoration: none;
@@ -304,3 +315,97 @@ footer a {
   }
 }
 
+.mt-5 {
+  margin-top: 5rem !important;
+}
+
+@media (min-width: 1441px) {
+  .container {
+    margin-right: 4%;
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .mt-5 {
+    margin-top: 12rem !important;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  textarea#message {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .mt-5 {
+    margin-top: 12rem !important;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  max-width: 90%;
+  margin: auto;
+  top: 10%;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 10px 0 0;
+  font-family: "league gothic", sans-serif;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.card a:hover {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1441px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    top: 5%;
+  }
+}
