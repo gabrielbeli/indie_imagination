@@ -23,9 +23,9 @@ Você pode acessar o site em funcionamento no seguinte link: [Indie Imagination]
 
 ### Página Inicial
 
-![Página Inicial Desktop](assets/indie.mp4)
+![Página Inicial Desktop](assets/indieGif.gif)
 
-![Página Inicial Mobile](assets/indie_mobile.mp4)
+![Página Inicial Mobile](assets/indiemobile.gif)
 
 ## Como Contribuir
 
