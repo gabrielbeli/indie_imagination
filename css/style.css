@@ -6,17 +6,7 @@ html {
   overflow: hidden;
 }
 
-.video-background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 120%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: -1;
-}
-
+.video-background,
 .video-background-gallery {
   position: absolute;
   top: 50%;
@@ -26,6 +16,10 @@ html {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: -1;
+}
+
+.video-background-gallery {
+  height: 110%;
 }
 
 .nameCompany {
@@ -38,18 +32,15 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100px;
-
   color: white;
   font-size: 32px;
-  font-family: "league gothic", sans-serif;
+  font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
 }
 
-@media (mi)
-
-@media (max-height: 768px) and (min-height: 769px) {
+@media (max-height: 768px) {
   .nameCompany {    
-    left:12%;
+    left: 12%;
   }
 }
 
@@ -57,18 +48,18 @@ html {
   position: relative;
   z-index: 10;
   margin: 10px 20px 0;
+}
 
-  a {
-    color: white;
-    font-size: 24px;
-    font-family: "league gothic", sans-serif;
-    text-transform: uppercase;
-    margin-top: 5px;
-  }
+.nav a {
+  color: white;
+  font-size: 24px;
+  font-family: "League Gothic", sans-serif;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
 
-  a:hover {
-    color: black;
-  }
+.nav a:hover {
+  color: black;
 }
 
 .nav .nav-link.active {
@@ -107,8 +98,9 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
-  inset: 0 0 0 0;
+  inset: 0;
 }
+
 .carousel .list .item video {
   width: 100%;
   height: 100%;
@@ -137,6 +129,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
+
 .thumbnail .item video {
   width: 100%;
   height: 100%;
@@ -224,15 +217,14 @@ html {
   overflow: hidden;
   animation: showThumbnail 0.5s linear 1 forwards;
 }
-.carousel.prev .list .item video {
-  z-index: 100;
-}
+
 @keyframes showThumbnail {
   from {
     width: 0;
     opacity: 0;
   }
 }
+
 .carousel.next .thumbnail {
   animation: effectNext 0.5s linear 1 forwards;
 }
@@ -253,6 +245,7 @@ html {
   bottom: 0;
   left: 0;
 }
+
 @keyframes outFrame {
   to {
     width: 150px;
@@ -279,14 +272,12 @@ footer {
   bottom: 0;
   width: 100vw;
   padding: 5px;
-  background: bisque;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-around;
   opacity: 0.5;
   z-index: 10;
-
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
 }
 
 footer img {
@@ -304,13 +295,13 @@ footer a {
   max-width: 400px;
   color: white;
   margin-right: 3%;
+}
 
-  button {
-    background: white;
-    color: black;
-    border: none;
-    width: 100%;
-  }
+.container button {
+  background: white;
+  color: black;
+  border: none;
+  width: 100%;
 }
 
 .mt-5 {
@@ -332,7 +323,7 @@ footer a {
   }
 
   .mt-5 {
-    margin-top: 12rem !important;
+    margin-top: 10rem !important;
   }
 
   .form-group {
@@ -347,7 +338,7 @@ footer a {
 
 @media (min-width: 1900px) {
   .mt-5 {
-    margin-top: 12rem !important;
+    margin-top: 10rem !important;
   }
 }
 
@@ -378,7 +369,7 @@ footer a {
 
 .card p {
   margin: 10px 0 0;
-  font-family: "league gothic", sans-serif;
+  font-family: "League Gothic", sans-serif;
 }
 
 .card a {
@@ -399,14 +390,12 @@ footer a {
     -webkit-overflow-scrolling: touch;
     gap: 10px;
     max-width: 100%;
-     
   }
 
   .card {
     max-width: 100%; 
     flex: 0 0 auto;
     scroll-snap-align: center;
-    
   }
 }
 
@@ -419,31 +408,18 @@ footer a {
 }
 
 .modal-content {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255);
   font-size: 20px;
   line-height: 24px;
   text-align: center;
 }
 
 .modal-title {
+  color: black;
   font-size: 2rem !important;
-  font-family: "league gothic", sans-serif;
-  color: whitesmoke;
-
-  img {
-    filter: invert(100%);
-  }
+  font-family: "League Gothic", sans-serif;
 }
 
 .btn-close {
   font-size: 1rem;
-}
-
-.modal-footer {
-  
-  button {
-    background-color: whitesmoke;
-    color: #000;
-    border: none;
-  }
 }
